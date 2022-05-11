@@ -1,0 +1,345 @@
+/* ---------------------------------- ----------------------------------МОЙ КОД---------------------------------- ---------------------------------- */
+/* ---------------------------------- ----------------------------------БАЗОВЫЕ НАСТРОЙКИ---------------------------------- ---------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+*{
+    margin: 0;
+}
+body{
+    background: linear-gradient(to bottom, #0e0f0f 0%, #292c2f 80%);
+}
+.Search{
+  display: none;
+}
+/* ---------------------------------- ----------------------------------HEADER---------------------------------- ---------------------------------- */
+header{
+    background-color: #0e0f0f;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+header a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 30px 25px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 1s;
+    font-family: 'Ubuntu', sans-serif;
+}
+header a:hover {
+    background-color: #dcdcdd;
+    color: black;
+}
+header a.active {
+    background-color: #3d6a66;
+    color: #dcdcdd;
+}
+/* ---------------------------------- ----------------------------------ИГРЫ---------------------------------- ---------------------------------- */
+/* ---------------------------------- ----------------------------------КАРТИНКИ---------------------------------- ---------------------------------- */
+.first, .second{
+    display: flex;
+    color: #dcdcdd;
+}
+.w{
+    margin-left: 23%;
+}
+.q{
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+.first{
+  margin-top: 5%;
+  margin-bottom: 7%;
+}
+/* ---------------------------------- ----------------------------------НАЗВАНИЕ---------------------------------- ---------------------------------- */
+p{
+    font-size: 150%;
+    font-family: 'Lato', sans-serif;
+}
+/* ---------------------------------- ----------------------------------ЦЕНА---------------------------------- ---------------------------------- */
+.price{
+    font-size: 180%;
+    font-weight: bold;
+}
+.oldprice{
+  color: #a4a4a5;
+  text-decoration: line-through;
+  font-weight: normal;
+  padding-right: 5%;
+  font-size: 110%;
+}
+.price, .oldprice{
+  font-family: 'Squada One', cursive;
+}
+/* ---------------------------------- ----------------------------------РАЗДЕЛЫ---------------------------------- ---------------------------------- */
+.p{
+  color:#dcdcdd;
+  font-size: 200%;
+  margin-left: 20%;
+  margin-top: 4%;
+  font-family: 'Ubuntu', sans-serif;
+}
+/* ---------------------------------- ----------------------------------ВИДЕО---------------------------------- ---------------------------------- */
+  video{
+    width: 100%;
+    margin-top: -5.5%;
+}
+/* ------------------------------------------------------------------------------------------------------НЕ МОЙ КОД------------------------------------------------------------------------------------------------------ */
+.buyp{
+  text-align: center;
+  margin-top: 20%;
+  color: #dcdcdd;
+  font-size: 400%;
+  margin-bottom: 20%;
+}
+.snip1573 {
+  background-color: #000;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin: 10px;
+  max-width: 315px;
+  min-width: 230px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.snip1573 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.snip1573:before,
+.snip1573:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  background-color: #000000;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+  content: '';
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.snip1573:before {
+  -webkit-transform: skew(45deg) translateX(-155%);
+  transform: skew(45deg) translateX(-155%);
+}
+
+.snip1573:after {
+  -webkit-transform: skew(45deg) translateX(155%);
+  transform: skew(45deg) translateX(155%);
+}
+
+.snip1573 img {
+  backface-visibility: hidden;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.snip1573 figcaption {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  -webkit-box-shadow: 0 0 10px #000000;
+  box-shadow: 0 0 10px #000000;
+}
+
+.snip1573 h3 {
+  background-color: #000000;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+
+.snip1573 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.snip1573:hover > img,
+.snip1573.hover > img {
+  opacity: 0.5;
+}
+
+.snip1573:hover:before,
+.snip1573.hover:before {
+  -webkit-transform: skew(45deg) translateX(-55%);
+  transform: skew(45deg) translateX(-55%);
+}
+
+.snip1573:hover:after,
+.snip1573.hover:after {
+  -webkit-transform: skew(45deg) translateX(55%);
+  transform: skew(45deg) translateX(55%);
+}
+
+.snip1573:hover figcaption,
+.snip1573.hover figcaption {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.moc, .mov{
+visibility: hidden;
+}
+/* Посмотреть больше */
+.sliding-button {
+text-decoration: none;
+color: white;
+display: inline-block;
+position: relative;
+padding: 15px 30px;
+border: 1px solid;
+border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+border-image-slice: 1;
+margin: 10px 20px;
+font-family: 'Montserrat', sans-serif;
+text-transform: uppercase;
+overflow: hidden;
+letter-spacing: 2px;
+transition: .8s cubic-bezier(.165, .84, .44, 1);
+margin-left: 80%;
+margin-top: -10%;
+}
+.sliding-button:before {
+content: "";
+position: absolute;
+left: 0;
+top: 0;
+height: 0;
+width: 100%;
+z-index: -1;
+color: white;
+background: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+transition: .8s cubic-bezier(.165, .84, .44, 1);
+}
+.sliding-button:hover {
+background: rgba(255, 255, 255, 0);
+}
+.sliding-button:hover:before {
+bottom: 0%;
+top: auto;
+height: 100%;
+}
+/* Footer */
+section {
+  width: 100%;
+  display: inline-block;
+  background: #ccc;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
