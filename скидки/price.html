@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\главная\main.css">
+    <title>NotSteam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://yastatic.net/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="shortcut icon" href="..\картинки\favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <div class="buttons" id="up">
+            <a class="Main" href="..\главная\index.html">Главная</a>
+            <a class="Buy" href="..\все игры\all games.html">Все игры</a>
+            <a class="Sort active">Скидки</a>
+        </div>
+        <div class="Search">
+            <form>
+            <input type="text" placeholder="Искать здесь...">
+            <button type="submit"></button>
+          </form>
+        </div>
+    </header>
+    <main>
+        <div class="all">
+            <div class="first">
+                <div class="q w">
+                    <figure class="snip1573">
+                        <img src="..\картинки\CS.jpg" alt="Pine" width="250" height="350">
+                        <figcaption>
+                          <h3>Купить</h3>
+                        </figcaption>
+                        <a href="..\страницы\CS\price.html"></a>
+                    </figure>
+                    <p>Cities: Skylines</p>
+                    <p class="price"><span class="oldprice">649₽</span>162,25₽</p>
+                </div>
+        </div>
+    </main>
+    <footer class="footer-distributed">  
+        <div class="footer-left">
+  
+          <p class="footer-links">
+            <a class="link-1" href="#up">↑Наверх</a>
+  
+            <a href="#">Отзывы</a>
+  
+            <a href="#">Контакты</a>
+  
+            <a href="#">О нас</a>
+  
+            <a href="#">Помощь</a>
+  
+            <a href="#">Лицензия</a>
+          </p>
+  
+          <p>NotSteam &copy; 2021</p>
+        </div>
+  
+      </footer>
+</body>
+<script>
+    $(".hover").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
+$(window).scroll(function(){
+        $('.mov').each(function(){
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+800) {
+                $(this).removeClass('mov');
+                $(this).addClass('animate__backInLeft');
+            }
+        });
+    });
+    $(window).scroll(function(){
+        $('.moc').each(function(){
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+900) {
+                $(this).removeClass('moc');
+                $(this).addClass('animate__backInRight');
+            }
+        });
+    });
+$(document).ready(function(){
+ $('[href^="#"]').on('click', function(event){
+      if ($(this).attr('hash') !== "") {
+      event.preventDefault();
+      let hash = $(this).prop('hash');
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+      });
+    }
+  });
+});
+</script>
+</html>

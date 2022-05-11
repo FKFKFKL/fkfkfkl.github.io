@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\AD\main.css">
+    <title>NotSteam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://yastatic.net/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="shortcut icon" href="..\..\картинки\favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <div class="buttons" id="up">
+            <a class="Main" href="..\..\главная\index.html">Главная</a>
+            <a class="Buy" href="..\..\все игры\all games.html">Все игры</a>
+            <a class="Sort" href="..\..\скидки\price.html">Скидки</a>
+        </div>
+        <div class="Search">
+            <form>
+            <input type="text" placeholder="Искать здесь...">
+            <button type="submit"></button>
+          </form>
+        </div>
+    </header>
+    <main>
+        <div class="all">
+          <div class="slideshow-container">
+            <p class="p q">Sokobond</p>
+            <!--Колесо изображений -->
+            <div class="mySlides fade">
+              <img src="..\..\картинки\sc1.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="..\..\картинки\sc2.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="..\..\картинки\sc3.jpg" style="width:100%">
+            </div>
+          
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+        <p class="p">Sokobond — головоломка о химических процессах с элегантными решениями. Логичная, лаконичная и приятная на вид. Создана с любовью и научным подходом командой профессиональных дизайнеров головоломок.</p>
+        <div class="buy">
+          <a href="..\..\покупка\buy.html" class="floating-button">Купить</a>
+          <p class="price">199₽</p>
+        </div>
+      </main>
+    <footer class="footer-distributed">  
+        <div class="footer-left">
+  
+          <p class="footer-links">
+            <a class="link-1" href="#up">↑Наверх</a>
+  
+            <a href="#">Отзывы</a>
+  
+            <a href="#">Контакты</a>
+  
+            <a href="#">О нас</a>
+  
+            <a href="#">Помощь</a>
+  
+            <a href="#">Лицензия</a>
+          </p>
+  
+          <p>NotSteam &copy; 2021</p>
+        </div>
+  
+      </footer>
+</body>
+<script>
+    $(".hover").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
+$(window).scroll(function(){
+        $('.mov').each(function(){
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+800) {
+                $(this).removeClass('mov');
+                $(this).addClass('animate__backInLeft');
+            }
+        });
+    });
+    $(window).scroll(function(){
+        $('.moc').each(function(){
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+900) {
+                $(this).removeClass('moc');
+                $(this).addClass('animate__backInRight');
+            }
+        });
+    });
+$(document).ready(function(){
+ $('[href^="#"]').on('click', function(event){
+      if ($(this).attr('hash') !== "") {
+      event.preventDefault();
+      let hash = $(this).prop('hash');
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+      });
+    }
+  });
+});
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</html>
